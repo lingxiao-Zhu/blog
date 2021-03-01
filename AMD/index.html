@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD requirejs</title>
+    <script src="./requirejs.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        AMD requirejs
+    </div>
+</body>
+<script>
+
+    require.config({
+        paths: {
+            "jquery": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery",
+            "lodash": "https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.20/lodash.core"
+        }
+    });
+    requirejs(['jquery', 'lodash', 'math'], function ($, _, math) {
+        // const val = math.add(1, 1);
+        // $('#root').text(val);
+    })
+</script>
+
+</html>

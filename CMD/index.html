@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMD sea.js</title>
+    <script src="./sea.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        CMD sea.js
+    </div>
+</body>
+<script>
+
+    seajs.config({
+        alias: {
+            "jquery": "./jq.sea.js",
+        }
+    })
+    seajs.use('./main.js', function (...args) {
+    })
+</script>
+
+</html>
